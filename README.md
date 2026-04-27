@@ -4,7 +4,8 @@
 
 Prepared for **LFX Mentorship 2026 Summer - Broadening the RISC-V High Precision Code Base and Reach**
 
-
+[![RISC-V](https://img.shields.io/badge/RISC--V-64bit-blue)](https://riscv.org/)
+[![Status](https://img.shields.io/badge/Build-Success-brightgreen)](https://github.com)
 
 ## 🎯 Project Overview
 
@@ -22,23 +23,27 @@ This repository contains my preparation work for the LFX Mentorship program focu
 
 ## 📁 Repository Contents
 
-lfx-riscv-2026/
-├── README.md                          # This file
-├── Dockerfile                         # RISC-V development environment
-├── GROMACS_PORTING_REPORT.md          # Complete porting documentation
-├── GROMACS_DEPENDENCIES.md            # Dependency analysis
-├── BUILD_INSTRUCTIONS.md              # GROMACS Build instructions
-├── scripts                            # GROMACS Build script
-│   └── build-gromacs.sh               # Build script 
-├── gromacs/                           # GROMACS source code
-│   └── build/                         # Build directory
-│       └── bin/                       # RISC-V binaries (gmx, etc.)
-├── evidence/                          # SUCCESSFUL Build evidence
-│   └── build-verification.txt         # evidence
-├── hello.c                            # First RISC-V test program
-├── hello-riscv                        # RISC-V binary
-├── hpc_test.c                         # HPC double-precision test
-└── hpc_test                           # RISC-V binary
+## 📁 Repository Contents
+
+```
+gromacs-riscv-port/
+├── README.md                    # This file
+├── Dockerfile                   # RISC-V development environment
+├── GROMACS_PORTING_REPORT.md    # Complete porting documentation
+├── GROMACS_DEPENDENCIES.md      # Dependency analysis
+├── BUILD_INSTRUCTIONS.md        # GROMACS Build instructions
+├── scripts                      # GROMACS Build script
+│   └── build-gromacs.sh         # Build script
+├── gromacs/                     # GROMACS source code
+│   └── build/                   # Build directory
+│       └── bin/                 # RISC-V binaries (gmx, etc.)
+├── evidence/                    # SUCCESSFUL Build evidence
+│   └── build-verification.txt   # Build evidence
+├── hello.c                      # First RISC-V test program
+├── hello-riscv                  # RISC-V binary
+├── hpc_test.c                   # HPC double-precision test
+└── hpc_test                     # RISC-V binary
+```
 
 ## 🔬 Binary Verification
 
