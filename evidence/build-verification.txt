@@ -1,0 +1,43 @@
+# GROMACS RISC-V Build Verification
+
+## Binary Architecture Verification
+
+$ file bin/gmx
+bin/gmx: ELF 64-bit LSB pie executable, UCB RISC-V, RVC, 
+         double-float ABI, version 1 (SYSV), dynamically linked, 
+         interpreter /lib/ld-linux-riscv64-lp64d.so.1, 
+         BuildID[sha1]=f659501f9a16b3ec8c2a36a40b3ff59d63e986ac, 
+         for GNU/Linux 4.15.0, not stripped
+
+$ readelf -h bin/gmx | grep Machine
+  Machine:                           RISC-V
+
+## Build Success Confirmation
+
+[100%] Building CXX object api/nblib/samples/CMakeFiles/methane-water-integration.dir/methane-water-integration.cpp.o
+[100%] Linking CXX executable ../../../bin/argon-forces-integration
+[100%] Built target argon-forces-integration
+[100%] Linking CXX executable ../../../bin/methane-water-integration
+[100%] Built target methane-water-integration
+
+## Binaries Produced
+
+$ ls -lh bin/
+total 284K
+-rwxr-xr-x 1 root root  72K Apr 25 13:23 argon-forces-integration
+-rwxr-xr-x 1 root root 116K Apr 25 13:23 gmx
+-rwxr-xr-x 1 root root  96K Apr 25 13:23 methane-water-integration
+
+## CMake Configuration Output
+
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting best SIMD instructions for this CPU
+-- Detection for best SIMD instructions failed, using SIMD - None
+-- SIMD instructions disabled
+-- Using external FFT library - FFTW3 build managed by GROMACS
+-- Using GROMACS built-in BLAS.
+-- Using GROMACS built-in LAPACK.
+-- Configuring done (19.1s)
+-- Generating done (2.4s)
+-- Build files have been written to: /workspace/gromacs/build
